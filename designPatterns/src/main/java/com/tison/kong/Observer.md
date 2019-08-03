@@ -38,7 +38,7 @@ public class NotifyReceiver implements Observer {
 ```
 #### 2.被观察者对象NotifySender 
 需要实现一个接口类Observable，需要写一个消息通知方法（publishnewInfo）,标志对象的状态变化发生，同时发送该变化的通知。
-```
+```java
 public class NotifySender extends Observable {
 
     private String name;
@@ -65,7 +65,7 @@ public class NotifySender extends Observable {
 ```
 #### 3.测试主类
 在main方法中，只要用户主动触发被观察者的变更，那么相应的通知就会即刻送达到观察者那里。
-```
+```java
 public class ObserveTest {
 
     public static void main(String[] args) {
@@ -106,7 +106,7 @@ spring的观察者模式，更场景化一点的说法就是事件机制，从ja
 - **ApplicationContext**是Spring中的核心容器，在事件监听中ApplicationContext可以作为事件的发布者，也就是事件源。因为ApplicationContext继承自ApplicationEventPublisher。在ApplicationEventPublisher中定义了事件发布的方法。
 
 捋起来眼花缭乱，按照真实案例show code就能依葫芦写出自己所需要的监听事件，以订单下单为例，如果用户下单成功，需要发送短信、邮件以及IM消息，我们可能会按照如下逻辑来写：
-```
+```java
     /**
      * 下单成功处理事件
      * @param order
@@ -124,7 +124,7 @@ spring的观察者模式，更场景化一点的说法就是事件机制，从ja
 
 #### 1.自定义事件
 自定义事件只需要继承ApplicationEvent类，而事件中需要传递的数据对象，则可以设置为私有变量成员，方便发布者去set进去（通过构造方法），而订阅者get出来，我们这里的订单事件传播的就是订单对象Order。
-```
+```java
 @Data
 @Builder(toBuilder = true)
 public class Order {
@@ -161,7 +161,7 @@ public class OrderEvent extends ApplicationEvent {
 ```
 #### 2.定义监听者
 监听者可以直接加上`@Component`交给Spring托管，而具体的监听处理方法则需要加上`@EventListener`注解，方法的输入参数定义为监听者需要监听的事件（OrderEvent），这样就完成了监听者对具体事件的注册绑定，方法里就可以写用户自己的处理逻辑了。
-```
+```java
 /**
  * @author Tison
  * @date 2019-08-03
@@ -194,7 +194,7 @@ public class ShortMessageListener {
 }
 ```
 可以看到我们这里是一个提供短信服务的监听器，在这个短信服务里面，如果需要监听别的事件则只需要顺序往下顺序加处理逻辑，可扩展性就非常好。订单完成除了走短信服务，还可以走邮件服务，那么依葫芦画瓢来提供一个邮件监听器：
-```
+```java
 /**
  * @author Tison
  * @date 2019-08-03
