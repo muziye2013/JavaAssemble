@@ -262,7 +262,7 @@ public class OrderService implements IOrderService {
 ### 总结
 抽象的来讲：对一个对象状态的更新，需要其他对象同步更新，而且其他对象的数量动态可变；对象仅需要将自己的更新通知给其他对象而不需要知道其他对象的细节。大家可以根据以上两点作为基本准则，某个场景是否满足观察者模式。具体应用场景就有很多了，比如文中的事件机制、公众号订阅，tomcat源码中也有很多地方用到了。
 
-JDK事件的实现是基于观察者模式，而spring事件又是在jdk事件的基础上进行了拓展。而本文的所有代码都已经上传至github库中，**本文代码地址，请戳[JavaAssemble-Obesever](https://github.com/tisonkong/JavaAssemble/tree/master/designPatterns/src/main/java/com/tison/kong/Observer)**。
+JDK事件的实现是基于观察者模式，而spring事件又是在jdk事件的基础上进行了拓展。本文的所有代码都已经上传至github库中，**本文代码地址，请戳[JavaAssemble-Obesever](https://github.com/tisonkong/JavaAssemble/tree/master/designPatterns/src/main/java/com/tison/kong/Observer)**。
 
 >source: [设计模式之观察者模式，事件机制的底层原理]([https://www.cnblogs.com/youzhibing/p/9593788.html](https://www.cnblogs.com/youzhibing/p/9593788.html)
 )
