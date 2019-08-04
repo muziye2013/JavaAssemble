@@ -11,12 +11,13 @@
     </parent>
 
     <groupId>com.tison</groupId>
-    <artifactId>kong</artifactId>
+    <artifactId>JavaAssemble</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <description>Java program template for Spring Boot</description>
 
     <modules>
         <module>designPatterns</module>
+        <module>Wiki</module>
     </modules>
 
     <properties>
