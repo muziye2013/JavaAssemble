@@ -1,14 +1,13 @@
-package com.tison.kong.Observer.spring.Service.impl;
+package com.tison.kong.observer.spring.Service.impl;
 
-import com.tison.kong.Observer.spring.Service.IOrderService;
-import com.tison.kong.Observer.spring.dto.Order;
-import com.tison.kong.Observer.spring.dto.OrderEvent;
+import com.tison.kong.observer.spring.Service.IOrderService;
+import com.tison.kong.observer.spring.dto.Order;
+import com.tison.kong.observer.spring.dto.OrderEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.UUID;
 
 /**
  * @author Tison

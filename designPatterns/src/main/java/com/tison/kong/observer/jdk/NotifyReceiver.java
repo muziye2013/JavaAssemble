@@ -1,4 +1,4 @@
-package com.tison.kong.Observer.jdk;
+package com.tison.kong.observer.jdk;
 
 import java.util.Observable;
 import java.util.Observer;

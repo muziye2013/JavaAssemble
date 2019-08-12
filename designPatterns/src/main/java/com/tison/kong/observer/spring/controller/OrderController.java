@@ -1,7 +1,7 @@
-package com.tison.kong.Observer.spring.controller;
+package com.tison.kong.observer.spring.controller;
 
-import com.tison.kong.Observer.spring.Service.IOrderService;
-import com.tison.kong.Observer.spring.dto.Order;
+import com.tison.kong.observer.spring.Service.IOrderService;
+import com.tison.kong.observer.spring.dto.Order;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

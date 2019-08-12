@@ -1,6 +1,6 @@
-package com.tison.kong.Observer.spring.Service;
+package com.tison.kong.observer.spring.Service;
 
-import com.tison.kong.Observer.spring.dto.Order;
+import com.tison.kong.observer.spring.dto.Order;
 
 /**
  * @author Tison

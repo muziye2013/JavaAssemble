@@ -1,6 +1,6 @@
-package com.tison.kong.Observer.spring.listener;
+package com.tison.kong.observer.spring.listener;
 
-import com.tison.kong.Observer.spring.dto.OrderEvent;
+import com.tison.kong.observer.spring.dto.OrderEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;

@@ -1,4 +1,4 @@
-package com.tison.kong.Observer.spring.dto;
+package com.tison.kong.observer.spring.dto;
 
 import org.springframework.context.ApplicationEvent;
 
