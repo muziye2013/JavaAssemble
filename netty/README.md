@@ -26,5 +26,3 @@
 2、thinking_fioa.[Netty专栏 ](https://blog.csdn.net/thinking_fioa/column/info/22861)
 3、lhrimperial.[Netty整体架构](https://blog.csdn.net/u013857458/article/details/82527722)
 4、并发编程网.[Netty系列博客](https://ifeve.com/tag/netty/)
-
-***2019-7-23打卡！***
