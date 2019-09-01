@@ -23,16 +23,16 @@ public class NettyServer {
      */
     private static EventLoopGroup group = new NioEventLoopGroup();
 
-    private static ServerBootstrap b = new ServerBootstrap();
+    private static ServerBootstrap bootstrap = new ServerBootstrap();
 
     public static void main(String[] args) throws InterruptedException {
         try {
-            b.group(group);
-            b.channel(NioServerSocketChannel.class);
+            bootstrap.group(group);
+            bootstrap.channel(NioServerSocketChannel.class);
             //设置过滤器
-            b.childHandler(new NettyServerFilter());
+            bootstrap.childHandler(new NettyServerFilter());
             // 服务器绑定端口监听
-            ChannelFuture f = b.bind(port).sync();
+            ChannelFuture f = bootstrap.bind(port).sync();
             System.out.println("服务端启动成功...");
             // 监听服务器关闭监听
             f.channel().closeFuture().sync();
