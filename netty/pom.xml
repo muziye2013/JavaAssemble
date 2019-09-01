@@ -12,6 +12,7 @@
     <artifactId>netty</artifactId>
 
     <dependencies>
+        <!-- netty全组件 -->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>

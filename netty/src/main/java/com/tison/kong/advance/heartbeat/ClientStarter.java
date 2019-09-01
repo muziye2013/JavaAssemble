@@ -30,18 +30,9 @@ public class ClientStarter {
 
     public ClientStarter(Bootstrap bootstrap) {
         this.bootstrap = bootstrap;
-        ClientStarter clientStarter = this;
         bootstrap.group(new NioEventLoopGroup())
                 .channel(NioSocketChannel.class)
-                .handler(new ChannelInitializer<SocketChannel>() {
-                    @Override
-                    protected void initChannel(SocketChannel ch) throws Exception {
-                        ch.pipeline().addLast(new StringEncoder());
-                        ch.pipeline().addLast(new StringDecoder());
-                        ch.pipeline().addLast(new IdleStateHandler(0, 0, 4));
-                        ch.pipeline().addLast(new HeartBeatClientHandler(clientStarter));
-                    }
-                });
+                .handler(new NettyClientFilter(this));
     }
 
     public void connect() {
