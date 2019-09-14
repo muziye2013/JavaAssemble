@@ -1,7 +1,8 @@
 package com.tison.kong.rpc.server;
 
-import com.nettyrpc.protocol.RpcRequest;
-import com.nettyrpc.protocol.RpcResponse;
+
+import com.tison.kong.rpc.protocol.RpcRequest;
+import com.tison.kong.rpc.protocol.RpcResponse;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
