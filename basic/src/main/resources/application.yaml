@@ -1,4 +1,4 @@
 excutor:
-  coolPoolSize: 6
-  maxPoolSize: 20
+  core-pool-size: 6
+  max-pool-size: 20
   queueCapacity: 100

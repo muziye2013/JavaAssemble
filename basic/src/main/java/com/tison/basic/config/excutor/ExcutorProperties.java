@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author tison
  * @date 2019/10/21
- * @description 线程池装配实体
+ * @description 线程池配置实体
  */
 @Data
 @ConfigurationProperties(prefix="excutor")
@@ -18,5 +18,4 @@ public class ExcutorProperties {
     private int maxPoolSize = 10;
 
     private int queueCapacity = 64;
-
 }

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author tison
  * @date 2019/10/22
- * @description
+ * @description 配置类注入容器
  */
 @Configuration
 public class ExcutorConfiguration {
