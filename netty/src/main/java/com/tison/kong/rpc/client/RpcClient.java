@@ -1,8 +1,9 @@
 package com.tison.kong.rpc.client;
 
-import com.nettyrpc.client.proxy.IAsyncObjectProxy;
-import com.nettyrpc.client.proxy.ObjectProxy;
-import com.nettyrpc.registry.ServiceDiscovery;
+
+import com.tison.kong.rpc.client.proxy.IAsyncObjectProxy;
+import com.tison.kong.rpc.client.proxy.ObjectProxy;
+import com.tison.kong.rpc.registry.ServiceDiscovery;
 
 import java.lang.reflect.Proxy;
 import java.util.concurrent.ArrayBlockingQueue;

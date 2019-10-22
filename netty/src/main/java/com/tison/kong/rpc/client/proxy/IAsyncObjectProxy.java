@@ -1,6 +1,7 @@
 package com.tison.kong.rpc.client.proxy;
 
-import com.nettyrpc.client.RPCFuture;
+
+import com.tison.kong.rpc.client.RPCFuture;
 
 /**
  * Created by luxiaoxun on 2016/3/16.

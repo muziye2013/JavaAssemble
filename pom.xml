@@ -20,6 +20,7 @@
         <module>designPatterns</module>
         <module>wiki</module>
         <module>netty</module>
+        <module>basic</module>
     </modules>
 
     <properties>
