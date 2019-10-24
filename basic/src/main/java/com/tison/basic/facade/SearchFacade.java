@@ -41,7 +41,7 @@ public class SearchFacade {
      */
     public SearchResult searchAll(String context){
         log.info("search method begin, context={}", context);
-        //聚合结果Map
+        //聚合结果Map，线程安全
         Map<String, Object> resultMap = new ConcurrentHashMap<>(searchServiceMap.size());
         try{
             //Future集合
@@ -51,6 +51,7 @@ public class SearchFacade {
                 String type = entry.getKey();
                 CompletableFuture<SearchResult> future = asyncService.search(type, context);
                 futureList.add(future);
+                //异步回调：聚合搜索结果
                 future.thenAccept(searchResult -> resultMap.put(type, searchResult.getData()));
             }
             //阻塞等待最后一个返回
