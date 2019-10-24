@@ -22,9 +22,9 @@ public class AsyncService {
     @Autowired
     private final Map<String, ISearchService> searchServiceMap = new ConcurrentHashMap<>();
 
-    public AsyncService(Map<String, ISearchService> strategyMap) {
+    public AsyncService(Map<String, ISearchService> searchServiceMap) {
         this.searchServiceMap.clear();
-        strategyMap.forEach((k, v)-> this.searchServiceMap.put(k, v));
+        searchServiceMap.forEach((k, v)-> this.searchServiceMap.put(k, v));
     }
 
     /**
