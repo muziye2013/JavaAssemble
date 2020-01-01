@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
  * @description 线程池配置实体
  */
 @Data
+@Component
 @ConfigurationProperties(prefix="excutor")
 public class ExcutorProperties {
 
