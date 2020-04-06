@@ -12,8 +12,10 @@ import java.util.List;
  * JVM_SETTINGS:-Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=d:/dump/
  */
 public class HeapOOM {
+
     static class OOMObject {
     }
+
     public static void main(String[] args) {
         int i = 0;
         List<OOMObject> list = new ArrayList<OOMObject>();

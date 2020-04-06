@@ -12,10 +12,6 @@
 -XX:+PrintGCDateStamps
 -XX:+PrintGCTimeStamps
 
-2、JVM参数合并一行：
-------------------------------------------------------------
--Xms200M -Xmx200M -XX:NewSize=100m -XX:MaxNewSize=100m -XX:SurvivorRatio=8 -XX:PretenureSizeThreshold=20m -XX:+UseConcMarkSweepGC -Xloggc:gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps
-
 3、优化后JVM参数
 ------------------------------------------------------------
 -Xms300M
